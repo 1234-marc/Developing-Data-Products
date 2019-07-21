@@ -3176,15 +3176,462 @@ slide:not(.current) .plotly.html-widget{
 </article></slide><slide class=""><hgroup><h2>Application and Code Links</h2></hgroup><article  class="smaller " id="application-and-code-links">
 
 <ul>
-<li><p><strong>Apllication Deployed at</strong> <a href='https://shiny.rstudio.com/gallery' title=''>https://shiny.rstudio.com/gallery</a></p></li>
-<li><p><strong>Apllication Code at</strong> <a href='https://github/1234marc' title=''>https://github/1234marc</a></p></li>
+<li><p><strong>Apllication Deployed at</strong> <a href='https://marcetienne.shinyapps.io/CourseraDevDataProdWeek4/' title=''>https://marcetienne.shinyapps.io/CourseraDevDataProdWeek4/</a></p></li>
+<li><p><strong>Apllication Code at</strong> <a href='https://github.com/1234-marc/Developing-Data-Products' title=''>https://github.com/1234-marc/Developing-Data-Products</a></p></li>
 </ul>
 
-<p>Based on Iris Data Set as follows:</p>
+<p> </p>
 
-<pre class = 'prettyprint lang-r'>head(iris)</pre>
+<p><strong>Based on Iris Data Set as follows:</strong></p>
 
-<p>Sepal.Length Sepal.Width Petal.Length Petal.Width Species 1 5.1 3.5 1.4 0.2 setosa 2 4.9 3.0 1.4 0.2 setosa 3 4.7 3.2 1.3 0.2 setosa 4 4.6 3.1 1.5 0.2 setosa 5 5.0 3.6 1.4 0.2 setosa 6 5.4 3.9 1.7 0.4 setosa</p></article></slide>
+<pre class = 'prettyprint lang-r'>library(xtable)
+print(xtable(head(iris,10)), type = &quot;html&quot;)</pre>
+
+<!-- html table generated in R 3.6.0 by xtable 1.8-4 package -->
+
+<!-- Sun Jul 21 00:10:44 2019 -->
+
+<table border="1">
+
+<tr>
+
+<th>
+
+</th>
+
+<th>
+
+Sepal.Length
+
+</th>
+
+<th>
+
+Sepal.Width
+
+</th>
+
+<th>
+
+Petal.Length
+
+</th>
+
+<th>
+
+Petal.Width
+
+</th>
+
+<th>
+
+Species
+
+</th>
+
+</tr>
+
+<tr>
+
+<td align="right">
+
+1
+
+</td>
+
+<td align="right">
+
+5.10
+
+</td>
+
+<td align="right">
+
+3.50
+
+</td>
+
+<td align="right">
+
+1.40
+
+</td>
+
+<td align="right">
+
+0.20
+
+</td>
+
+<td>
+
+setosa
+
+</td>
+
+</tr>
+
+<tr>
+
+<td align="right">
+
+2
+
+</td>
+
+<td align="right">
+
+4.90
+
+</td>
+
+<td align="right">
+
+3.00
+
+</td>
+
+<td align="right">
+
+1.40
+
+</td>
+
+<td align="right">
+
+0.20
+
+</td>
+
+<td>
+
+setosa
+
+</td>
+
+</tr>
+
+<tr>
+
+<td align="right">
+
+3
+
+</td>
+
+<td align="right">
+
+4.70
+
+</td>
+
+<td align="right">
+
+3.20
+
+</td>
+
+<td align="right">
+
+1.30
+
+</td>
+
+<td align="right">
+
+0.20
+
+</td>
+
+<td>
+
+setosa
+
+</td>
+
+</tr>
+
+<tr>
+
+<td align="right">
+
+4
+
+</td>
+
+<td align="right">
+
+4.60
+
+</td>
+
+<td align="right">
+
+3.10
+
+</td>
+
+<td align="right">
+
+1.50
+
+</td>
+
+<td align="right">
+
+0.20
+
+</td>
+
+<td>
+
+setosa
+
+</td>
+
+</tr>
+
+<tr>
+
+<td align="right">
+
+5
+
+</td>
+
+<td align="right">
+
+5.00
+
+</td>
+
+<td align="right">
+
+3.60
+
+</td>
+
+<td align="right">
+
+1.40
+
+</td>
+
+<td align="right">
+
+0.20
+
+</td>
+
+<td>
+
+setosa
+
+</td>
+
+</tr>
+
+<tr>
+
+<td align="right">
+
+6
+
+</td>
+
+<td align="right">
+
+5.40
+
+</td>
+
+<td align="right">
+
+3.90
+
+</td>
+
+<td align="right">
+
+1.70
+
+</td>
+
+<td align="right">
+
+0.40
+
+</td>
+
+<td>
+
+setosa
+
+</td>
+
+</tr>
+
+<tr>
+
+<td align="right">
+
+7
+
+</td>
+
+<td align="right">
+
+4.60
+
+</td>
+
+<td align="right">
+
+3.40
+
+</td>
+
+<td align="right">
+
+1.40
+
+</td>
+
+<td align="right">
+
+0.30
+
+</td>
+
+<td>
+
+setosa
+
+</td>
+
+</tr>
+
+<tr>
+
+<td align="right">
+
+8
+
+</td>
+
+<td align="right">
+
+5.00
+
+</td>
+
+<td align="right">
+
+3.40
+
+</td>
+
+<td align="right">
+
+1.50
+
+</td>
+
+<td align="right">
+
+0.20
+
+</td>
+
+<td>
+
+setosa
+
+</td>
+
+</tr>
+
+<tr>
+
+<td align="right">
+
+9
+
+</td>
+
+<td align="right">
+
+4.40
+
+</td>
+
+<td align="right">
+
+2.90
+
+</td>
+
+<td align="right">
+
+1.40
+
+</td>
+
+<td align="right">
+
+0.20
+
+</td>
+
+<td>
+
+setosa
+
+</td>
+
+</tr>
+
+<tr>
+
+<td align="right">
+
+10
+
+</td>
+
+<td align="right">
+
+4.90
+
+</td>
+
+<td align="right">
+
+3.10
+
+</td>
+
+<td align="right">
+
+1.50
+
+</td>
+
+<td align="right">
+
+0.10
+
+</td>
+
+<td>
+
+setosa
+
+</td>
+
+</tr>
+
+</table></article></slide>
 
 
   <slide class="backdrop"></slide>
