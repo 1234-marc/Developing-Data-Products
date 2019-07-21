@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coursera Course Project</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Coursera Course Project">
+  <meta name="author" content="Marc Etienne de Montrigaud                         [15/07/2019]">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Coursera Course Project</h1>
+    <h2>Shiny Application and Reproducible Pitch</h2>
+    <p>Marc Etienne de Montrigaud                         [15/07/2019]<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Overview</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This presentation is the <strong>supporting documentation</strong> for a <strong>Shiny Application and Reproducible Pitch</strong> developed for the Week 4 assignment of the <strong>Coursera Developing Data Products course</strong>.</p>
+
+<blockquote>
+<div class="red2"><b>Introduction to the application</b></div>
+
+<p style="font-size:18px"><br>
+ - <b>Application Name:</b> Playing With Iris Dataset and Machine Learning Algorithms<br>
+ - <b>Based on:</b> Shiny framework + JavaScript codes + "iris" dataset<br>
+ - <b>Required R Packages:</b> shiny, psych, scatterplot3d, ggplot2, gridExtra, grid, caret, kernlab, randomForest, e1071<br>
+</p>
+
+<div class="red2"><b>Objectives of the application</b></div>
+
+<p style="font-size:18px"><br>
+ - With this interactive application you will be able to <b>(1)</b> sample and view the "iris" dataset as a table, <b>(2)</b> generate multiple pre-defined graphs with the sampled dataset, <b>(3)</b> explore multiple pre-defined machine learning algorithms for Specie predictions and finally <b>(4)</b> test prediction with these algorithms.<br> 
+ - For modeling there is also an option to adjust cross-validation controls (number of folds and repetitions) before running the selected model.<br>
+ - All the R codes for generating graphs, models and prediction are displayed in each corresponding panel.<br>
+</p>
+</blockquote>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Application Description</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The application consists of 4 Panels, each one with variables setting and specific results as follows:</p>
+
+<div class="red"><b>Panel 1 - Explore Data Set</b><br>
+<p style="font-size:18px">Sample and resample the iris data set as many timeS desired. Changing the sample size of the iris dataset will affect all the subsequent panels (graphs, machine learning modeling and prediction). All settings referring to this panel are in <b>red</b> font color.</p></div>
+
+<div class="green"><b>Panel 2 - Explore Vizualizations</b><br>
+<p style="font-size:18px">Plot the sampled iris data set in many pre-defined graph formats. Changing the graph types will only affect the results of this Panel. All settings referring to this panel are in <b>green</b> font color.</p></div>
+
+<div class="blue"><b>Panel 3 - Explore Models</b><br>
+<p style="font-size:18px">Select machine learning algorithms and cross-validation variables (folds and repetitions). Changing the model types, number of folds an repetitions may affect the results of the prediction Panel. All settings referring to this panel are in <b>blue</b> font color.</p></div>
+
+<div class="pink"><b>Panel 4 - Try Your Own Specie Predictions</b><br>
+<p style="font-size:18px">Input values to Petal.Width, Petal.Length, Sepal.Width and Sepal.Length and see the result for Specie Prediction. All settings referring to this panel are in <b>darkorchid</b> font color.</p></div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Application Print Screen</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="myShinyApp.png" width="85%" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Application and Code Links</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p><b>Apllication Deployed at</b>  <a href="https://marcetienne.shinyapps.io/CourseraDevDataProdWeek4/">https://marcetienne.shinyapps.io/CourseraDevDataProdWeek4/</a></p></li>
+<li><p><b>Apllication Code at</b>  <a href="https://github.com/1234-marc/DevelopingDataProducts">https://github.com/1234-marc/DevelopingDataProducts</a></p></li>
+</ul>
+
+<p><b>Based on Iris Data Set as follows:</b></p>
+
+<pre><code class="r">library(xtable)
+print(xtable(head(iris)), type = &quot;html&quot;)
+</code></pre>
+
+<!-- html table generated in R 3.6.0 by xtable 1.8-4 package -->
+
+<!-- Sat Jul 20 22:48:22 2019 -->
+
+<table border=1>
+<tr> <th>  </th> <th> Sepal.Length </th> <th> Sepal.Width </th> <th> Petal.Length </th> <th> Petal.Width </th> <th> Species </th>  </tr>
+  <tr> <td align="right"> 1 </td> <td align="right"> 5.10 </td> <td align="right"> 3.50 </td> <td align="right"> 1.40 </td> <td align="right"> 0.20 </td> <td> setosa </td> </tr>
+  <tr> <td align="right"> 2 </td> <td align="right"> 4.90 </td> <td align="right"> 3.00 </td> <td align="right"> 1.40 </td> <td align="right"> 0.20 </td> <td> setosa </td> </tr>
+  <tr> <td align="right"> 3 </td> <td align="right"> 4.70 </td> <td align="right"> 3.20 </td> <td align="right"> 1.30 </td> <td align="right"> 0.20 </td> <td> setosa </td> </tr>
+  <tr> <td align="right"> 4 </td> <td align="right"> 4.60 </td> <td align="right"> 3.10 </td> <td align="right"> 1.50 </td> <td align="right"> 0.20 </td> <td> setosa </td> </tr>
+  <tr> <td align="right"> 5 </td> <td align="right"> 5.00 </td> <td align="right"> 3.60 </td> <td align="right"> 1.40 </td> <td align="right"> 0.20 </td> <td> setosa </td> </tr>
+  <tr> <td align="right"> 6 </td> <td align="right"> 5.40 </td> <td align="right"> 3.90 </td> <td align="right"> 1.70 </td> <td align="right"> 0.40 </td> <td> setosa </td> </tr>
+   </table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Overview'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Application Description'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Application Print Screen'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Application and Code Links'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
